@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>HelathAbove60 - Registration</title>
+<link rel="stylesheet" type="text/css" th:href="@{/css/registration.css}">
+</head>
+
+<body>
+	<div class="testbox">
+		<h1>Registration</h1>
+
+<!--             <form autocomplete="off" action="#" th:action="@{/registration}" th:object="${user}" method="post" class="form-horizontal" role="form"> -->
+		<form class="form-signin" th:action="@{/registration}" method="post">
+<!-- 			<div class="accounttype">
+				<input type="radio" value="None" id="radioOne" name="account" checked />
+				<label for="radioOne" class="radio" chec>Personal</label>
+				<input type="radio" value="None" id="radioTwo" name="account" />
+				<label for="radioTwo" class="radio">Company</label>
+			</div> -->
+			<label id="icon" for="email"><i class="icon-envelope "></i></label>
+			<input type="text" name="email" id="email" placeholder="Email" required />
+			<label id="icon" for="name"><i class="icon-user"></i></label> 
+			<input type="text" name="name" id="name" placeholder="Name" required /> 
+			<label id="icon" for="password"><i class="icon-shield"></i></label> 
+			<input type="password" name="password" id="password" placeholder="Password" required />
+<!-- 			<div class="gender">
+				<input type="radio" value="None" id="male" name="gender" checked />
+				<label for="male" class="radio" checked>Male</label> 
+				<input type="radio" value="None" id="female" name="gender" /> 
+				<label for="female" class="radio">Female</label>
+			</div> -->
+			<p>
+				By clicking Register, you agree on our <a href="#">terms and conditions</a>.
+			</p>
+	        <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+		</form>
+	    <form th:action="@{/}">
+	    	<button class="btn btn-lg btn-primary btn-block">Sign In</button>
+	    </form>
+	</div>
+</body>
+</html>
